@@ -13,6 +13,48 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+
+    .projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.project{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    border-top:5px solid #2563eb;
+    transition:all .3s ease;
+}
+
+.project:hover{
+    transform:translateY(-6px);
+}
+
+.project h3{
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.project p{
+    margin-bottom:15px;
+}
+
+.project ul{
+    padding-left:18px;
+}
+
+.project li{
+    margin-bottom:8px;
+}
+
+.tech{
+    margin-top:15px;
+    color:#2563eb;
+    font-weight:600;
+}
 }
 
 body{
