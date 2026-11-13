@@ -649,5 +649,57 @@ José Guadalupe Burgos Mata © 2026
 
 </footer>
 
+<script>
+
+const counters = document.querySelectorAll('.counter');
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(!entry.isIntersecting) return;
+
+const counter = entry.target;
+const target = Number(counter.dataset.target);
+const suffix = counter.dataset.suffix;
+
+let current = 0;
+
+const increment = target / 80;
+
+const update = ()=>{
+
+current += increment;
+
+if(current < target){
+
+counter.textContent =
+Math.floor(current) + suffix;
+
+requestAnimationFrame(update);
+
+}else{
+
+counter.textContent =
+target + suffix;
+
+}
+
+};
+
+update();
+
+observer.unobserve(counter);
+
+});
+
+},{threshold:.5});
+
+counters.forEach(counter=>{
+observer.observe(counter);
+});
+
+</script>
+    
 </body>
 </html>
