@@ -463,6 +463,50 @@ font-size:.95rem;
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
+
+.companies-section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.companies-section h2{
+    margin-top:10px;
+    font-size:2.2rem;
+}
+
+.companies-description{
+    max-width:800px;
+    margin:20px auto 50px;
+    color:#b0b0b0;
+}
+
+.companies-logos{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:50px;
+}
+
+.company-item img{
+
+    height:60px;
+    width:auto;
+
+    filter:grayscale(100%);
+    opacity:.7;
+
+    transition:all .4s ease;
+}
+
+.company-item img:hover{
+
+    filter:grayscale(0%);
+    opacity:1;
+
+    transform:translateY(-5px) scale(1.05);
+}
+    
 }
 
 body{
@@ -690,6 +734,46 @@ Enterprise Data Platforms y arquitecturas modernas basadas en Azure y Microsoft 
 </div>
 </section>
 
+<section id="companies" class="companies-section">
+
+    <div class="container">
+
+        <span class="section-tag">
+            Experiencia Empresarial
+        </span>
+
+        <h2>
+            Proyectos para organizaciones líderes
+        </h2>
+
+        <p class="companies-description">
+            Participación en iniciativas de integración, calidad y análisis de datos para empresas de los sectores financiero, retail y consumo masivo.
+        </p>
+
+        <div class="companies-logos">
+
+            <div class="company-item">
+                <img src="images/santander.svg" alt="Santander">
+            </div>
+
+            <div class="company-item">
+                <img src="images/heb.svg" alt="HEB">
+            </div>
+
+            <div class="company-item">
+                <img src="images/pepsico.svg" alt="PepsiCo">
+            </div>
+
+            <div class="company-item">
+                <img src="images/alsea.svg" alt="Alsea">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    
 <section class="section">
 
 <div class="container">
